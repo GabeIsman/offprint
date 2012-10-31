@@ -1,0 +1,130 @@
+//-----------------------------------
+// VARIABLES & MIXINS
+//-----------------------------------
+$black: rgb(0,0,0)
+$white: rgb(255,255,255)
+$facebook_blue: rgb(35,72,126)
+$transparent_facebook_blue: rgba(35,72,126,.1)
+@mixin boxshadow( $amount )
+  -webkit-box-shadow: 0px 0px $amount $black
+  -mox-box-shadow: 0px 0px $amount $black
+  -ms-box-shadow: 0px 0px $amount $black
+  -o-box-shadow: 0px 0px $amount $black
+  box-shadow: 0px 0px $amount $black
+
+//-----------------------------------
+// RESET & GENERAL
+//-----------------------------------
+*
+  margin: 0
+  padding: 0
+  
+li
+  list-style: none
+  
+a
+  color: inherit
+  text-decoration: none
+  
+h1,
+h2,
+li
+  font-family: "Helvetica Neue", "Helvetica", "Verdana", "Arial", sans-serif
+  line-height: 100%
+  font-weight: 400
+  
+body
+  position: relative
+  width: 100%
+  height: 100%
+  nav#primary-nav
+    background-color: $transparent_facebook_blue
+    display: block
+    margin-top: 0
+    position: absolute
+    top: 0
+    width: 100%
+    height: 44px
+    ul
+      margin: 0 auto
+      width: 500px
+      li:first-child
+        float: left
+        text-align: left
+      li
+        color: $facebook_blue
+        display: block
+        float: right
+        font-size: 14px
+        line-height: 44px
+        text-align: right
+        width: 100px
+
+#content-wrapper
+  padding: 79px 0 100px 0
+  position: relative
+  width: 100%
+  height: 100%
+  hgroup
+    display: block
+    margin: 0 auto
+    position: relative
+    width: 1000px
+    height: 100px
+    h1#name
+      color: $facebook_blue
+      display: block
+      font-size: 50px
+      line-height: 50px
+      text-align: center
+      text-transform: uppercase
+      width: 100%
+      height: 50px
+  .content
+    border: 10px solid $facebook_blue
+    margin: 0 auto 0 auto
+    width: 500px
+    height: 500px
+    ul#books
+      position: relative
+      width: 500px
+      height: 500px
+      li
+        cursor: pointer
+        display: none
+        position: absolute
+        width: 50px
+        height: 50px
+        img.cover
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+          z-index: 1
+          width: 50px
+          height: 50px
+        .gloss
+          background-color: $facebook_blue
+          display: none
+          position: absolute
+          top: 0
+          left: 0
+          width: 50px
+          height: 50px
+          z-index: 2
+          h2.name
+            display: none
+    h1#not-logged-in-warning
+      color: $facebook_blue
+      cursor: pointer
+      display: block
+      font-size: 50px
+      margin: -25px 0 0 -250px
+      position: absolute
+      top: 50%
+      left: 50%
+      text-align: center
+      width: 500px
+      height: 100px
+  
+
